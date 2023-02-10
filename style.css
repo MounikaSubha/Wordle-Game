@@ -1,0 +1,142 @@
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+body {
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+	line-height: 1.6;
+	font-size: 20px;
+}
+.wrapper {
+    margin : 10rem auto;
+    width:300px;
+    height:550px; 
+    
+}
+.wrapper header{
+    border-bottom:2px solid black;
+    padding:2rem;
+    text-align: center;
+    width:100%;
+    
+}
+.wrapper .spiral{
+  font-size: 50px;
+  animation: spin 1.5s linear infinite;
+}
+.wrapper .info-bar{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:10px;   
+}
+.hidden {
+  visibility: hidden;
+}
+@keyframes spin{
+    to{
+            transform: rotate(360deg);
+    }
+} 
+.wrapper .container{
+    display:grid;
+    grid-template-columns:0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    row-gap: 10px;
+    width:100%;
+    margin-top:0.8rem;
+}
+.wrapper .container div{
+    width:45px;
+    height:45px;
+     border: 3px solid #ccc;
+    margin: 0 auto;
+    font-size: xx-large;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.correct{
+    background-color: darkgreen;
+    color:white;
+}
+.wrong{
+    background-color: #888;
+    color:white; 
+}
+.close{
+    background-color: goldenrod;
+    color:white;
+}
+.invalid{
+    animation:flash 1s;
+}
+@keyframes flash{
+    10%{
+        border-color:crimson;
+    }
+    100%{
+        border-color: #ccc;
+    }
+}
+.winner{
+    animation : rainbow 4s infinite linear;
+}
+@keyframes rainbow{
+     100%,
+     0% {
+    color: rgb(255, 0, 0);
+  }
+  8% {
+    color: rgb(255, 127, 0);
+  }
+  16% {
+    color: rgb(255, 255, 0);
+  }
+  25% {
+    color: rgb(127, 255, 0);
+  }
+   33% {
+    color: rgb(0, 255, 0);
+  }
+  41% {
+    color: rgb(0, 255, 127);
+  }
+  50% {
+    color: rgb(0, 255, 255);
+  }
+  58% {
+    color: rgb(0, 127, 255);
+  }
+  66% {
+    color: rgb(0, 0, 255);
+  }
+  75% {
+    color: rgb(127, 0, 255);
+  }
+  83% {
+    color: rgb(255, 0, 255);
+  }
+  91% {
+    color: rgb(255, 0, 127);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
